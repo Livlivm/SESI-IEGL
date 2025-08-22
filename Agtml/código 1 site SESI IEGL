@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESI IEGL</title>
+</head>
+<body bgcolor = "#252c5f">
+    <font color = "#ffdf2b"><center><h1>SESI IEGL</h1></center></font>
+    <font color = "#ffffff"><form>
+    <fieldset>
+        <button>Cadastrar</button> <button>Login</button>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Cadastro</legend>
+        <p>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="E-mail" required>
+        </p>
+        <p>
+            <label for="senha">Informe sua senha</label>
+            <input id="senha" type="password" placeholder="senha" required>
+        </p>
+        <p>
+             <label for="confirmacao">Confirme a senha</label>
+             <input id="confirmacao" type="password"placeholder="Confirmar senha" required>
+      </p>
+      <p>
+            <button type="submit">Cadastrar</button>
+      </p>  
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Meu perfil</legend>
+        <center><img src="Captura de tela 2025-08-15 121743.png" width = "100" height = "100"></center>
+        <center><h4>Fulaninho da Silva</h4></center>
+        <br>
+        <hr>             
+            <center><font color = "#ffdf2b">informações basicas</font></center> 
+            <br>
+            <p>nome completo:  Fulaninho da Silva  
+            <br>                              
+            endereço de e-mail:
+            <br>                    
+            FulaninhodaSilva@gmail.com  
+            <br>                      
+            senha:***alterar senha</p>  
+            <br>
+            <hr>
+            <center><font color = "#ffdf2b">informações do sistema</font></center>
+            <p>idioma:  padrão do sistema
+            <br>
+            configurações de privacidade:
+            <font color = "#ffdf2b"><p>somente instrutores podem ver
+            minhas informações</p></font>
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> Cursos </legend>
+        <input type="checkbox" id="ids" />
+        <label for="ids"> <img src="idiomas.png" width = "75" height = "75" >Cursos  de  idiomas  </label>
+        <input type="checkbox" id="tec" />
+        <label for="tec"><img src="Tecnologia  e  informática.png" width = "75" height = "75">Tecnologia  e  informática </label>
+        <input type="checkbox" id="saude" />
+        <label for="saude"><img src="saude.png" width = "75" height = "75">Saúde  e  Bem-estar </label>
+        <input type="checkbox" id="eng" />
+        <label for="eng"><img src="engenharia.png" width = "75" height = "75">Engenaria e Indústria </label>
+        <input type="checkbox" id="art" />
+        <label for="art"><img src="artes.png" width = "75" height = "75">Arte e Design </label>
+        <input type="checkbox" id="dsp" />
+        <label for="dsp"><img src="Captura de tela 2025-08-15 124544.png" width = "75" height = "75">Desenvolvimento pessoal </label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> Cursos  de  idiomas</legend>
+        <input type="checkbox" id="ing" />
+        <label for="ing"><img src="ingles.png" width = "75" height = "75">Inglês</label>
+        <input type="checkbox" id="fran" />
+        <label for="fran"><img src="frances.png" width = "75" height = "75">Francês</label>
+        <input type="checkbox" id="esp" />
+        <label for="esp"><img src="espanhol.png" width = "75" height = "75">Espanhol</label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Meus Cursos</legend>
+        <input type="checkbox" id="ing" />
+        <label for="ing"><img src="ingles.png" width = "75" height = "75">Inglês</label>
+        <input type="checkbox" id="tec" />
+        <label for="tec"><img src="Tecnologia  e  informática.png" width = "75" height = "75">Tecnologia e Informática</label>
+        <input type="checkbox" id="eng" />
+        <label for="eng"><img src="engenharia.png" width = "75" height = "75">Engenaria e Indústria</label>
+    </fieldset>
+    <br>
+    <fieldset>
+            <legend>Cronograma</legend>
+            <font color = "#ffdf2b"><h4>Segunda</h4></font>
+  <font color = "#ffffff"><p>10h às 11h30 — Saúde e Bem-estar: Aula sobre nutrição, autocuidado ou meditação</p>
+  <p>14h às 16h — Idiomas: Aula de inglês/espanhol + prática com app</p>
+  <p>16h às 17h — Tecnologia e Informática: Curso de lógica de programação ou Excel</p></font>
+  <hr>
+            <font color = "#ffdf2b"><h4>Terça</h4></font>
+  <font color = "#ffffff"><p>14h às 15h — Idiomas: Conversação ou leitura com vídeos, músicas, podcasts</p></font>
+  <hr>
+            <font color = "#ffdf2b"><h4>Quarta</h4></font>
+  <font color = "#ffffff"><p>10h às 12h — Tecnologia e Informática: Curso de criação de sites, IA ou segurança digital</p></font>
+  <hr>
+            <font color = "#ffdf2b"><h4>Quinta</h4></font>
+  <font color = "#ffffff"><p>14h às 15h30 — Saúde e Bem-estar: Aula de yoga, alongamento ou ergonomia no trabalho</p>
+  <p>14h às 15h30 — Desenvolvimento Pessoal: Curso de oratória, foco ou inteligência emocional</p>
+  <p>15h30 às 17h — Desenvolvimento Pessoal: Curso de produtividade, liderança ou coaching</p></font>
+  <hr>
+          <font color = "#ffdf2b"><h4>Sexta</h4></font>
+  <font color = "#ffffff"><p>14h às 16h — Engenharia e Indústria: Curso introdutório de elétrica, mecânica ou produção</p>
+  <p>16h às 17h — Arte e Design: Aula de desenho, fotografia ou design gráfico</p></font>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Suporte</legend>
+        <label for="sup">não está entendendo algum assunto relacionado ao seu curso? envie sua dúvida!</label>
+        <br>
+        <input id="sup"placeholder="Digite sua duvida..." required>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Feedback</legend>
+        <label for="fee">envie seu feedback para melhorias.</label>
+        <br>
+        <input id="fee"placeholder="Deixe seu feedback..." required>   
+    </fieldset>
+    </form></font>
+</body>
+</html>
