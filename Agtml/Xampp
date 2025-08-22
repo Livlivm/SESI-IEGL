@@ -1,0 +1,73 @@
+-- Criar banco de dados
+CREATE DATABASE sesi_iegl;
+
+-- Usar banco de dados
+USE sesi_iegl;
+
+-- Criar tabela de Usuários
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    senha VARCHAR(100) NOT NULL
+);
+
+-- Criar tabela de Cursos
+CREATE TABLE curso (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    carga_horaria INT
+);
+
+-- Relacionamento: Usuário pode se inscrever em vários Cursos
+CREATE TABLE usuario_curso (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    curso_id INT,
+    data_inscricao DATE,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id),
+    FOREIGN KEY (curso_id) REFERENCES curso(id)
+);
+
+-- Criar tabela de Suporte
+CREATE TABLE suporte (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    mensagem TEXT,
+    data DATETIME,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id)
+);
+
+-- Criar tabela de Material Didático
+CREATE TABLE material_didatico (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    curso_id INT,
+    titulo VARCHAR(100),
+    tipo VARCHAR(50), -- ex: vídeo, pdf, slide
+    link VARCHAR(200),
+    FOREIGN KEY (curso_id) REFERENCES curso(id)
+);
+
+-- Inserir dados exemplo
+INSERT INTO usuario (nome, email, senha)
+VALUES ("Lívia Moura", "livia@sesi.com", "12345");
+
+INSERT INTO curso (titulo, descricao, carga_horaria)
+VALUES ("Introdução à Programação", "Curso básico de lógica e programação em C", 40);
+
+INSERT INTO usuario_curso (usuario_id, curso_id, data_inscricao)
+VALUES (1, 1, CURDATE());
+
+INSERT INTO suporte (usuario_id, mensagem, data)
+VALUES (1, "Não consigo acessar o curso", NOW());
+
+INSERT INTO material_didatico (curso_id, titulo, tipo, link)
+VALUES (1, "Apostila de Programação", "PDF", "http://sesi.com/apostila.pdf");
+
+-- Consultas de teste
+SELECT * FROM usuario;
+SELECT * FROM curso;
+SELECT * FROM usuario_curso;
+SELECT * FROM suporte;
+SELECT * FROM material_didatico;
